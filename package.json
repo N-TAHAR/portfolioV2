@@ -1,0 +1,23 @@
+{
+  "name": "portfoliov2",
+  "version": "1.0.0",
+  "description": "\"# portfolioV2\"",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N-TAHAR/portfolioV2.git"
+  },
+  "author": "Najib TAHAR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/N-TAHAR/portfolioV2/issues"
+  },
+  "homepage": "https://github.com/N-TAHAR/portfolioV2#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
+  }
+}
