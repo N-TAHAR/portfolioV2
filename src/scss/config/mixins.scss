@@ -1,0 +1,12 @@
+@mixin size($width: 100vw, $height: 100vh) {
+  width: $width;
+  height: $height;
+}
+
+@mixin position($top: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+$lightWhite: #fafafa;
