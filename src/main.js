@@ -1,7 +1,6 @@
-
-// let title = $(document.createElement("h1")).addClass('title');
-// let infoProject = $(document.createElement("p")).addClass('info-project');
-// $('.info-container').append(title);
+import $ from "jquery";
+import scrollify from 'jquery-scrollify'; 
+console.log($.scrollify);
 
 $(function(){
   $.scrollify({
