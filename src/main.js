@@ -2,6 +2,34 @@ import $ from "jquery";
 import scrollify from 'jquery-scrollify'; 
 console.log($.scrollify);
 
+let view = document.querySelectorAll('.view');
+
+for (let i = 0; i < view.length; i++) {
+  view[i].addEventListener('mouseover', function(){
+    for (let i = 0; i < view.length; i++) {
+      view[i].classList.add('onView');
+    }
+    })
+}
+
+for (let i = 0; i < view.length; i++) {
+  view[i].addEventListener('mouseout', function(){
+    for (let i = 0; i < view.length; i++) {
+      view[i].classList.remove('onView');
+    }
+    })
+}
+
+for (let i = 0; i < view.length; i++) {
+  view[i].addEventListener('click', function(){
+    for (let i = 0; i < view.length; i++) {
+      view[i].classList.toggle('clickView');
+      view[i].classList.remove('onView');
+    }
+    })
+}
+
+
 $(function(){
   $.scrollify({
     section : ".firstSection",
