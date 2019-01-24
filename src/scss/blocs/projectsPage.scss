@@ -84,7 +84,7 @@
 }
 
 
-.firstSection, .secondSection{
+.firstSection, .secondSection, .thirdSection{
   height: 100vh;
   pointer-events: none;
   background-size: 100% auto;
@@ -96,6 +96,13 @@
   &.active{
     filter: blur(0px);
   }
+  &.stop-scroll{
+    // height: 100%;
+    overflow: hidden;
+  }
+  &.stop-pointer{
+    pointer-events: initial;
+  }
 }
 
 .firstSection{
@@ -105,5 +112,10 @@
 
 .secondSection{
   background-image: url("../img/bg1.jpg");
+  background-position: center;
+}
+
+.thirdSection{
+  background-image: url("../img/bg2.jpg");
   background-position: center;
 }
