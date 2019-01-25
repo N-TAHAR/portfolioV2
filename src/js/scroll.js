@@ -16,19 +16,35 @@ let sectionScroll = (prevSection, activeSection, title, nextSection)=>{
   }, 500);
 }
 
+let memo;
 $(function(){
   $.scrollify({
-    section : ".firstSection",
-    interstitialSection : ".firstSection, .secondSection, .thirdSection",
+    section : ".homePage",
+    interstitialSection : ".homePage, .firstSection, .secondSection, .thirdSection",
     scrollSpeed: 1000,
     before: function(section){
       if(section===0){
-        sectionScroll('.secondSection', '.firstSection', 'Wanted');
+      memo = section;
+
       }
       if(section===1){
-        sectionScroll('.firstSection', '.secondSection', 'Project 1', '.thirdSection');
+        console.log(memo);
+        memo = section;
+        console.log(memo);
+        sectionScroll('.secondSection', '.firstSection', 'Wanted');
       }
       if(section===2){
+        console.log(memo);
+        memo = section;
+        console.log(memo);
+
+        sectionScroll('.firstSection', '.secondSection', 'Project 1', '.thirdSection');
+      }
+      if(section===3){
+        console.log(memo);
+        memo = section;
+        console.log(memo);
+
         sectionScroll('.secondSection', '.thirdSection', 'Project 2');
       }
     }
