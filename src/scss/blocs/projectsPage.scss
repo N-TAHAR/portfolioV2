@@ -2,7 +2,6 @@
   position: fixed;
   top: 0; 
   left: 4%;
-  color: $lightWhite;
   z-index: 1;
 }
 
@@ -29,7 +28,6 @@
   position: fixed;
   top: 5%;
   left: 75%;
-  color: $lightWhite;
   z-index: 1;
   width: 20%;
   & p{
@@ -76,10 +74,14 @@
 }
 
 .content{
+  color: $lightWhite;
   transition: all 0.3s;
   &.disappear-content{
     transform: translateY(50px);
     opacity: 0;
+  }
+  &.is-clicked{
+    color: #141414;
   }
 }
 
@@ -106,16 +108,16 @@
 }
 
 .firstSection{
-  background-image: url("../img/bg.jpg");
-  background-position: center;
-}
-
-.secondSection{
   background-image: url("../img/bg1.jpg");
   background-position: center;
 }
 
-.thirdSection{
+.secondSection{
   background-image: url("../img/bg2.jpg");
+  background-position: center;
+}
+
+.thirdSection{
+  background-image: url("../img/bg3.jpg");
   background-position: center;
 }

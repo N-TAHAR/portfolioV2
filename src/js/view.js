@@ -1,4 +1,5 @@
 let view = document.querySelectorAll('.view');
+let content = document.querySelectorAll('.content');
 
 // Hover on view
 for (let i = 0; i < view.length; i++) {
@@ -24,6 +25,9 @@ for (let i = 0; i < view.length; i++) {
     for (let i = 0; i < view.length; i++) {
       view[i].classList.toggle('clickView');
       view[i].classList.remove('onView');
+    }
+    for (let i = 0; content.length; i++){
+      content[i].classList.toggle('is-clicked');
     }
   })
 }
