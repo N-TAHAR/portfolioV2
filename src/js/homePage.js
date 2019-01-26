@@ -8,3 +8,5 @@ setTimeout(function(){
 setTimeout(function(){ 
   text.classList.add('reset');
 }, 1500);
+
+

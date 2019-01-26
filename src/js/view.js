@@ -1,3 +1,5 @@
+let cursor = document.getElementById('cursor');
+
 let view = document.querySelectorAll('.view');
 let content = document.querySelectorAll('.content');
 
@@ -7,6 +9,8 @@ for (let i = 0; i < view.length; i++) {
     for (let i = 0; i < view.length; i++) {
       view[i].classList.add('onView');
     }
+    
+    cursor.classList.add('enter');
   })
 }
 
@@ -16,7 +20,8 @@ for (let i = 0; i < view.length; i++) {
     for (let i = 0; i < view.length; i++) {
       view[i].classList.remove('onView');
     }
-    })
+    cursor.classList.remove('pointer');
+  })
 }
 
 // Click on view
@@ -36,3 +41,4 @@ for (let i = 0; i < view.length; i++) {
     }
   })
 }
+

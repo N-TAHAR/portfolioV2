@@ -1,3 +1,24 @@
+html{
+  cursor: none;
+}
+
+#cursor{
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $lightBlack;
+  font-weight: bold;
+  @include size(80px,80px);
+  background-color: $lightWhite;
+  border-radius: 50%;
+  z-index: 9999;
+  transition: width 0.1s, height 0.1s;
+  &.enter{
+    color: $lightBlack;
+  }
+}
+
 .info-container{
   position: fixed;
   top: 0; 
@@ -55,8 +76,9 @@
   align-items: center;
   justify-content: center;
   .view{
+    display: block;
     @include size(39vw, 10vh);
-    cursor: pointer;
+    // cursor: pointer;
     background-color: $lightWhite;
     mix-blend-mode: lighten;
     transform: rotate(-45deg);

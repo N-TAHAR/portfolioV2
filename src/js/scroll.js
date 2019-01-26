@@ -11,7 +11,7 @@ window.onbeforeunload = function () {
 let body = document.querySelector('body');
 let homePage = document.querySelector('.homePage');
 
-// homePage disappear 
+// homePage disappear & Scroll desactivate
 $.scrollify.disable();
 setTimeout(function(){ 
   homePage.classList.add('disappear');
@@ -72,3 +72,6 @@ $(function(){
 
 
 
+$(document).mousemove(function(e){
+  $("#cursor").css({left:e.pageX, top:e.pageY});
+});
