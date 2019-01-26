@@ -36,9 +36,12 @@
 }
 
 .layer{
+  // display: none;
   position: fixed;
   background-color: #000;
   top: 0;
+  // opacity: 0;
+  transition: all 0.3s;
   @include size;
 }
 
@@ -81,10 +84,9 @@
     opacity: 0;
   }
   &.is-clicked{
-    color: #141414;
+    color: $lightBlack;
   }
 }
-
 
 .firstSection, .secondSection, .thirdSection{
   height: 100vh;

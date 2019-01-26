@@ -29,5 +29,10 @@ for (let i = 0; i < view.length; i++) {
     for (let i = 0; content.length; i++){
       content[i].classList.toggle('is-clicked');
     }
+    if($.scrollify.isDisabled()){
+      $.scrollify.enable();
+    }else{
+      $.scrollify.disable();
+    }
   })
 }
