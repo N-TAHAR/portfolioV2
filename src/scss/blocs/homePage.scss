@@ -1,8 +1,8 @@
 body{
-  // overflow: hidden;
+  overflow: hidden;
   height: 100vh;
   &.disable{
-    // overflow: initial;
+    overflow: initial;
     height: 100%;
   }
 }
@@ -19,8 +19,27 @@ body{
   flex-direction: column;
   z-index: 99999;
   transition: all 1s;
-  &.disappear{
+
+  h1{
+    font-size: 4rem;
+    transform: translateY(-200px);
+  }
+
+  p{
+    transform: translateY(-50px);
+  }
+
+  h1,p{
     opacity: 0;
+    transition: all 1s;
+    &.reset{
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  &.disappear{
+    transform: translateY(100vh);
   }
   &.none{
     display: none;

@@ -15,13 +15,13 @@ let homePage = document.querySelector('.homePage');
 $.scrollify.disable();
 setTimeout(function(){ 
   homePage.classList.add('disappear');
-}, 2000);
+}, 3000);
 // activate the scroll 
 setTimeout(function(){ 
   homePage.classList.add('none');
   body.classList.add('disable');
   $.scrollify.enable();
-}, 3000);
+}, 4000);
 
 // function to make the animation on scroll with scrollify
 let sectionScroll = (prevSection, activeSection, title, nextSection)=>{
