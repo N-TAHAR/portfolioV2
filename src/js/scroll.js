@@ -73,5 +73,5 @@ $(function(){
 
 
 $(document).mousemove(function(e){
-  $("#cursor").css({left:e.pageX, top:e.pageY});
+  $(".cursor").css({left:e.pageX, top:e.pageY});
 });

@@ -1,4 +1,5 @@
-let cursor = document.getElementById('cursor');
+let cursor= document.querySelector('.cursor');
+let cursorText = document.querySelector('.cursor p');
 
 let view = document.querySelectorAll('.view');
 let content = document.querySelectorAll('.content');
@@ -9,8 +10,7 @@ for (let i = 0; i < view.length; i++) {
     for (let i = 0; i < view.length; i++) {
       view[i].classList.add('onView');
     }
-    
-    cursor.classList.add('enter');
+    cursorText.innerHTML = 'Click';
   })
 }
 
@@ -20,7 +20,7 @@ for (let i = 0; i < view.length; i++) {
     for (let i = 0; i < view.length; i++) {
       view[i].classList.remove('onView');
     }
-    cursor.classList.remove('pointer');
+    cursorText.innerHTML = 'Scroll';
   })
 }
 
@@ -31,14 +31,10 @@ for (let i = 0; i < view.length; i++) {
       view[i].classList.toggle('clickView');
       view[i].classList.remove('onView');
     }
+    cursor.classList.toggle('enter');
     for (let i = 0; content.length; i++){
       content[i].classList.toggle('is-clicked');
     }
-    if($.scrollify.isDisabled()){
-      $.scrollify.enable();
-    }else{
-      $.scrollify.disable();
-    }
-  })
+  });
 }
 
