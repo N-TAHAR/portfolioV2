@@ -13,7 +13,7 @@ html{
   @include size(80px,80px);
   background-color: $lightWhite;
   border-radius: 50%;
-  z-index: 4;
+  z-index: 10;
   transform: translate(-50%,-50%);
   transition: width 0.3s, height 0.3s, color 0.3s, background-color 0.3s;
   &.enter{
@@ -116,6 +116,9 @@ html{
   &.is-clicked{
     color: $lightBlack;
     background-color: $lightWhite;
+    & svg{
+      fill: $lightBlack;
+    }
   }
 }
 
@@ -153,4 +156,31 @@ html{
 .thirdSection{
   background-image: url("../img/bg3.jpg");
   background-position: center;
+}
+
+.social-container{
+  position: fixed;
+  bottom: 0px;
+  z-index: 5;
+  padding: 20px 50px 15px 50px;
+  & ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  & li:not(:last-child){
+    margin-right: 10px;
+  }
+
+  & a{
+    color: $lightWhite;
+  }
+
+  & svg{
+    fill: $lightWhite;
+    width: 40px;
+    height: 40px;
+    z-index: 20px;
+  }
 }
