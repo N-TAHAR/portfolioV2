@@ -1,3 +1,8 @@
+// $(window).load(function() {
+//   // Animate loader off screen
+//   $(".homePage").fadeOut("slow");;
+// });
+
 let title = document.querySelector('.homePage h1');
 let text = document.querySelector('.homePage p');
 
