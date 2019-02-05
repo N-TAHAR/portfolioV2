@@ -1,7 +1,6 @@
 // Import of libraries
 import $ from "jquery";
 import scrollify from 'jquery-scrollify'; 
-console.log($.scrollify);
 
 // Force to scroll to the top on refresh
 window.onbeforeunload = function () {
@@ -26,6 +25,7 @@ setTimeout(function(){
 // function to make the animation on scroll with scrollify
 let sectionScroll = (prevSection, activeSection, title, nextSection)=>{
   $('.content').addClass('disappear-content');
+  $('.social-icons').addClass('disappear');
   $(prevSection).removeClass('active');
   $(activeSection).addClass('active');
   if (nextSection)
@@ -35,6 +35,7 @@ let sectionScroll = (prevSection, activeSection, title, nextSection)=>{
     $('.view').removeClass('reset');
     $('.title').html(title);
     $('.content').removeClass('disappear-content');
+    $('.social-icons').removeClass('disappear');
   }, 500);
 }
 
@@ -47,22 +48,16 @@ $(function(){
     scrollSpeed: 1000,
     before: function(section){
       if(section===0){
-        console.log(memo);
         memo = section;
-        console.log(memo);
         sectionScroll('.secondSection', '.firstSection', 'Wanted');
       }
       if(section===1){
-        console.log(memo);
         memo = section;
-        console.log(memo);
 
         sectionScroll('.firstSection', '.secondSection', 'Project 1', '.thirdSection');
       }
       if(section===2){
-        console.log(memo);
         memo = section;
-        console.log(memo);
 
         sectionScroll('.secondSection', '.thirdSection', 'Project 2');
       }

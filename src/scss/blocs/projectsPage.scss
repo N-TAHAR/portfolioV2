@@ -116,9 +116,6 @@ html{
   &.is-clicked{
     color: $lightBlack;
     background-color: $lightWhite;
-    & svg{
-      fill: $lightBlack;
-    }
   }
 }
 
@@ -162,16 +159,31 @@ html{
   position: fixed;
   bottom: 0px;
   padding: 20px 50px 15px 50px;
-  z-index: 4;
+  width: 300px;
+  height: 100px;
+}
 
-  & ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+.social-icons{
+  position: fixed;
+  bottom: 0px;
+  padding: 20px 50px 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 3;
+  transition: transform 0.3s, opacity 0.3s;
+
+  &.disappear{
+    transform: translateY(50px);
+    opacity: 0;
   }
 
   & li:not(:last-child){
     margin-right: 30px;
+  }
+
+  & li{
+    z-index: 200;
   }
 
   & a{
@@ -191,5 +203,13 @@ html{
       cursor: none;
       fill: $lightBlack;
     }
+    &.hover:hover{
+      fill: $lightWhite;
+    }
   }
+
+  & .icon-color-change{
+    fill: $lightBlack
+  }
+  
 }
