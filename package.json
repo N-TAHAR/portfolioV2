@@ -18,12 +18,12 @@
   },
   "homepage": "https://github.com/N-TAHAR/portfolioV2#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.11.0",
-    "sass": "^1.16.1"
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.20.1"
   },
   "dependencies": {
-    "jquery": "^3.3.1",
-    "jquery-scrollify": "^1.0.19",
-    "jsdom": "^13.1.0"
+    "jquery": "^3.4.1",
+    "jquery-scrollify": "^1.0.20",
+    "jsdom": "^13.2.0"
   }
 }
