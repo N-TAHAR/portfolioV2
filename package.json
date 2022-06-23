@@ -24,6 +24,6 @@
   "dependencies": {
     "jquery": "^3.4.1",
     "jquery-scrollify": "^1.0.20",
-    "jsdom": "^13.2.0"
+    "jsdom": "^16.5.0"
   }
 }
